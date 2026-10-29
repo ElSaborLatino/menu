@@ -1,10 +1,27 @@
-# 🍷 Sabor - Digital Menu
+# 🍷 Sabor - Digital Web Menu
 
-Authentic Portuguese, Spanish & Italian Cuisine.
+A high-performance, responsive digital menu designed for **Sabor** restaurant, supporting multi-language navigation and mobile-first browsing.
 
-### Scan to View Menu:
+## 🌐 Live Menu & QR Code
+
+* **Live URL:** [https://ElSaborLatino.github.io/menu/](https://ElSaborLatino.github.io/menu/)
+* **Scan to View:**
+
 <p align="center">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://JaydaKad.github.io/sabor-menu/" alt="Sabor Menu QR Code">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ElSaborLatino.github.io/menu/" alt="Sabor Menu QR Code" width="200" height="200">
 </p>
 
-[Click here to view the live menu!](https://JaydaKad.github.io/sabor-menu/)
+---
+
+## 🛠️ Overview
+
+* **Frontend:** Clean single-file layout (`index.html`) using vanilla JavaScript, HTML5, and modern CSS.
+* **Languages Supported:** English, Turkish, Portuguese, and Greek.
+* **Data & Operations:** The codebase handles UI layout, dynamic rendering, and multi-language logic. Menu items, prices, and category details are managed externally and securely by the business owner.
+* **Hosting:** Hosted via GitHub Pages under the official organization domain.
+
+---
+
+## 🔒 Maintenance & Updates
+
+This repository serves strictly as the public web interface. Updates to menu items, localized descriptions, and pricing are maintained externally by the business owner and reflected on the live site automatically without needing direct code edits.
