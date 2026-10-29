@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sabor - Authentic Portuguese, Spanish & Italian Cuisine</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #f7f5f0;
@@ -89,7 +89,7 @@
     }
     section {
       margin-bottom: 24px;
-      scroll-margin-top: 130px;
+      scroll-margin-top: 140px;
     }
     .category-title {
       background-color: #8b263e;
@@ -168,17 +168,37 @@
     </div>
     <div class="subtitle">Authentic Portuguese Spanish & Italian Cuisine</div>
 
-    <div class="nav-pills">
-      <button class="pill active" onclick="scrollToCat('tapas')">Tapas</button>
-      <button class="pill" onclick="scrollToCat('meat')">Meat</button>
-      <button class="pill" onclick="scrollToCat('chicken')">Chicken</button>
-      <button class="pill" onclick="scrollToCat('pasta')">Pasta</button>
-      <button class="pill" onclick="scrollToCat('noodles')">Noodles</button>
-      <button class="pill" onclick="scrollToCat('paella')">Paella & Fish</button>
-      <button class="pill" onclick="scrollToCat('salads')">Salads</button>
-      <button class="pill" onclick="scrollToCat('kids')">Kids</button>
-      <button class="pill" onclick="scrollToCat('desserts')">Desserts</button>
-      <button class="pill" onclick="scrollToCat('drinks')">Drinks & Wines</button>
+    <div class="nav-pills" id="navPills">
+      <button class="pill active" onclick="scrollToCat('tapas', this)">
+        <span class="pill-text" data-en="Tapas" data-tr="Başlangıçlar" data-pt="Tapas">Tapas</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('meat', this)">
+        <span class="pill-text" data-en="Meat" data-tr="Et" data-pt="Carne">Meat</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('chicken', this)">
+        <span class="pill-text" data-en="Chicken" data-tr="Tavuk" data-pt="Frango">Chicken</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('pasta', this)">
+        <span class="pill-text" data-en="Pasta" data-tr="Makarnalar" data-pt="Massas">Pasta</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('noodles', this)">
+        <span class="pill-text" data-en="Noodles" data-tr="Erişte" data-pt="Noodles">Noodles</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('paella', this)">
+        <span class="pill-text" data-en="Paella & Fish" data-tr="Paella & Balık" data-pt="Paella & Peixe">Paella & Fish</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('salads', this)">
+        <span class="pill-text" data-en="Salads" data-tr="Salatalar" data-pt="Saladas">Salads</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('kids', this)">
+        <span class="pill-text" data-en="Kids" data-tr="Çocuk Menü" data-pt="Crianças">Kids</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('desserts', this)">
+        <span class="pill-text" data-en="Desserts" data-tr="Tatlılar" data-pt="Sobremesas">Desserts</span>
+      </button>
+      <button class="pill" onclick="scrollToCat('drinks', this)">
+        <span class="pill-text" data-en="Drinks & Wines" data-tr="İçecekler" data-pt="Bebidas & Vinhos">Drinks & Wines</span>
+      </button>
     </div>
   </header>
 
@@ -186,8 +206,8 @@
     <!-- TAPAS -->
     <section id="tapas">
       <div class="category-title">
-        <span>Tapas / Başlangıçlar</span>
-        <span class="sub">Starters</span>
+        <span class="cat-text" data-en="Tapas" data-tr="Başlangıçlar" data-pt="Tapas">Tapas</span>
+        <span class="sub cat-sub" data-en="Starters" data-tr="Starters" data-pt="Entradas">Starters</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
@@ -231,8 +251,8 @@
     <!-- MEAT -->
     <section id="meat">
       <div class="category-title">
-        <span>Meat / Et</span>
-        <span class="sub">Steaks & Beef</span>
+        <span class="cat-text" data-en="Meat" data-tr="Et" data-pt="Carne">Meat</span>
+        <span class="sub cat-sub" data-en="Steaks & Beef" data-tr="Steaks & Beef" data-pt="Bifes & Carne">Steaks & Beef</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
@@ -262,8 +282,8 @@
     <!-- CHICKEN -->
     <section id="chicken">
       <div class="category-title">
-        <span>Chicken / Tavuk</span>
-        <span class="sub">Poultry</span>
+        <span class="cat-text" data-en="Chicken" data-tr="Tavuk" data-pt="Frango">Chicken</span>
+        <span class="sub cat-sub" data-en="Poultry" data-tr="Poultry" data-pt="Aves">Poultry</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
@@ -286,8 +306,8 @@
     <!-- PASTA -->
     <section id="pasta">
       <div class="category-title">
-        <span>Pasta / Makarnalar</span>
-        <span class="sub">Italian Pasta</span>
+        <span class="cat-text" data-en="Pasta" data-tr="Makarnalar" data-pt="Massas">Pasta</span>
+        <span class="sub cat-sub" data-en="Italian Pasta" data-tr="Italian Pasta" data-pt="Massa Italiana">Italian Pasta</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
@@ -300,7 +320,7 @@
         <div class="menu-item">
           <div class="item-info">
             <div class="item-title">31. SPAGHETTI AL OLIO <span class="badge">V</span></div>
-            <div class="item-desc desc-text" data-en="With garlic, olive oil and chilli pepper" data-tr="Sarımsak, zeytinyağı ve acı biberli spagetti" data-pt="Com alho, azeite e pmalte picante">Sarımsak, zeytinyağı ve acı biberli spagetti | With garlic, olive oil and chilli pepper</div>
+            <div class="item-desc desc-text" data-en="With garlic, olive oil and chilli pepper" data-tr="Sarımsak, zeytinyağı ve acı biberli spagetti" data-pt="Com alho, azeite e pimenta picante">Sarımsak, zeytinyağı ve acı biberli spagetti | With garlic, olive oil and chilli pepper</div>
           </div>
           <div class="price-tag">425₺</div>
         </div>
@@ -317,8 +337,8 @@
     <!-- NOODLES -->
     <section id="noodles">
       <div class="category-title">
-        <span>Noodles</span>
-        <span class="sub">Asian Style Noodles</span>
+        <span class="cat-text" data-en="Noodles" data-tr="Erişte" data-pt="Noodles">Noodles</span>
+        <span class="sub cat-sub" data-en="Asian Style Noodles" data-tr="Asian Style Noodles" data-pt="Noodles Estilo Asiático">Asian Style Noodles</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
@@ -341,8 +361,8 @@
     <!-- PAELLA & FISH -->
     <section id="paella">
       <div class="category-title">
-        <span>Paella - Fish / Paella - Balık</span>
-        <span class="sub">Seafood Specials</span>
+        <span class="cat-text" data-en="Paella & Fish" data-tr="Paella & Balık" data-pt="Paella & Peixe">Paella & Fish</span>
+        <span class="sub cat-sub" data-en="Seafood Specials" data-tr="Seafood Specials" data-pt="Especiais de Marisco">Seafood Specials</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
@@ -365,8 +385,8 @@
     <!-- SALADS -->
     <section id="salads">
       <div class="category-title">
-        <span>Salads / Salatalar</span>
-        <span class="sub">Fresh Greens</span>
+        <span class="cat-text" data-en="Salads" data-tr="Salatalar" data-pt="Saladas">Salads</span>
+        <span class="sub cat-sub" data-en="Fresh Greens" data-tr="Fresh Greens" data-pt="Saladas Frescas">Fresh Greens</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
@@ -389,14 +409,14 @@
     <!-- KIDS -->
     <section id="kids">
       <div class="category-title">
-        <span>Kids / Çocuk Menü</span>
-        <span class="sub">For Little Ones</span>
+        <span class="cat-text" data-en="Kids" data-tr="Çocuk Menü" data-pt="Crianças">Kids</span>
+        <span class="sub cat-sub" data-en="For Little Ones" data-tr="For Little Ones" data-pt="Para os Pequenos">For Little Ones</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
           <div class="item-info">
             <div class="item-title">80. GRILLED CHICKEN AND CHIPS</div>
-            <div class="item-desc desc-text" data-en="Izgara tavuk ve kızartılmış patates" data-tr="Izgara tavuk ve kızartılmış patates" data-pt="Frango grelhado com batata frita">Izgara tavuk ve kızartılmış patates</div>
+            <div class="item-desc desc-text" data-en="Grilled chicken and chips" data-tr="Izgara tavuk ve kızartılmış patates" data-pt="Frango grelhado com batata frita">Izgara tavuk ve kızartılmış patates</div>
           </div>
           <div class="price-tag">450₺</div>
         </div>
@@ -413,21 +433,21 @@
     <!-- DESSERTS -->
     <section id="desserts">
       <div class="category-title">
-        <span>Desserts / Tatlılar</span>
-        <span class="sub">Sweet Treats</span>
+        <span class="cat-text" data-en="Desserts" data-tr="Tatlılar" data-pt="Sobremesas">Desserts</span>
+        <span class="sub cat-sub" data-en="Sweet Treats" data-tr="Sweet Treats" data-pt="Doces">Sweet Treats</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
           <div class="item-info">
             <div class="item-title">APPLE PIE</div>
-            <div class="item-desc desc-text" data-en="Elmalı pasta, krema ve dondurma ile" data-tr="Elmalı pasta, krema ve dondurma ile" data-pt="Tarte de maçã com creme e gelado">Elmalı pasta, krema ve dondurma ile</div>
+            <div class="item-desc desc-text" data-en="Apple pie with cream and ice cream" data-tr="Elmalı pasta, krema ve dondurma ile" data-pt="Tarte de maçã com creme e gelado">Elmalı pasta, krema ve dondurma ile</div>
           </div>
           <div class="price-tag">340₺</div>
         </div>
         <div class="menu-item">
           <div class="item-info">
             <div class="item-title">BANOFFEE PIE</div>
-            <div class="item-desc desc-text" data-en="Bisküvi üzeri muz, krema ve dondurma ile" data-tr="Bisküvi üzeri muz, krema ve dondurma ile" data-pt="Banoffee pie tradicional">Bisküvi üzeri muz, krema ve dondurma ile</div>
+            <div class="item-desc desc-text" data-en="Biscuit base with banana, cream and ice cream" data-tr="Bisküvi üzeri muz, krema ve dondurma ile" data-pt="Banoffee pie tradicional">Bisküvi üzeri muz, krema ve dondurma ile</div>
           </div>
           <div class="price-tag">340₺</div>
         </div>
@@ -444,10 +464,100 @@
     <!-- DRINKS & WINES -->
     <section id="drinks">
       <div class="category-title">
-        <span>Vino & Beverages / İçecekler</span>
-        <span class="sub">Wines, Beer & Bar</span>
+        <span class="cat-text" data-en="Drinks & Wines" data-tr="İçecekler" data-pt="Bebidas & Vinhos">Drinks & Wines</span>
+        <span class="sub cat-sub" data-en="Wines, Beer & Bar" data-tr="Wines, Beer & Bar" data-pt="Vinhos, Cerveja & Bar">Wines, Beer & Bar</span>
       </div>
       <div class="category-content">
         <div class="menu-item">
           <div class="item-info">
-            <div class="item-title">SANGRIA (Jug / Süra
+            <div class="item-title">SANGRIA (Jug / Sürahi - Serves 4)</div>
+            <div class="item-desc desc-text" data-en="Traditional fruit and spirit mix wine" data-tr="Geleneksel meyve ve alkol karışımlı şarap" data-pt="Vinho tradicional com mistura de frutos e licores">Traditional fruit and spirit mix wine</div>
+          </div>
+          <div class="price-tag">970₺</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <div class="item-title">SANGRIA (Glass / Kadeh)</div>
+            <div class="item-desc desc-text" data-en="Traditional fruit and spirit mix wine" data-tr="Geleneksel meyve ve alkol karışımlı şarap" data-pt="Vinho tradicional com mistura de frutos e licores">Traditional fruit and spirit mix wine</div>
+          </div>
+          <div class="price-tag">280₺</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <div class="item-title">CIELO 1908 CHARDONNAY (Italy)</div>
+            <div class="item-desc desc-text" data-en="Vino Blanco / White Wine (Glass / Bottle)" data-tr="Beyaz Şarap (Kadeh / Şişe)" data-pt="Vinho Branco (Copo / Garrafa)">Vino Blanco / White Wine (Glass / Bottle)</div>
+          </div>
+          <div class="price-tag">320₺ / 1140₺</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <div class="item-title">EFES PILSEN (50cl)</div>
+            <div class="item-desc desc-text" data-en="Beer" data-tr="Bira" data-pt="Cerveja">Beer</div>
+          </div>
+          <div class="price-tag">255₺</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-info">
+            <div class="item-title">TURKISH TEA (Demli Çay)</div>
+            <div class="item-desc desc-text" data-en="Traditional hot tea" data-tr="Geleneksel demli Türk çayı" data-pt="Chá quente tradicional turco">Traditional hot tea</div>
+          </div>
+          <div class="price-tag">90₺</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function scrollToCat(id, element) {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      element.classList.add('active');
+
+      const target = document.getElementById(id);
+      if (target) {
+        const headerOffset = 135;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    function changeLanguage(lang) {
+      // Update menu items and descriptions
+      const descElements = document.querySelectorAll('.desc-text');
+      descElements.forEach(el => {
+        if (el.dataset[lang]) {
+          el.innerText = el.dataset[lang];
+        }
+      });
+
+      // Update category titles
+      const catTexts = document.querySelectorAll('.cat-text');
+      catTexts.forEach(el => {
+        if (el.dataset[lang]) {
+          el.innerText = el.dataset[lang];
+        }
+      });
+
+      // Update category subtitles
+      const catSubs = document.querySelectorAll('.cat-sub');
+      catSubs.forEach(el => {
+        if (el.dataset[lang]) {
+          el.innerText = el.dataset[lang];
+        }
+      });
+
+      // Update top navigation pills
+      const pillTexts = document.querySelectorAll('.pill-text');
+      pillTexts.forEach(el => {
+        if (el.dataset[lang]) {
+          el.innerText = el.dataset[lang];
+        }
+      });
+    }
+  </script>
+</body>
+</html>
